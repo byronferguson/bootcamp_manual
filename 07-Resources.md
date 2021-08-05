@@ -136,3 +136,36 @@ To install these you can either search for them within VSCode, or follow the lin
 ## Technical Interviews
 
 - https://dev.to/denicmarko/resources-to-crush-the-technical-interview-1fc4?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email
+
+## BASH / ZSH Helper Scripts (React section)
+
+### React _(Week 20)_
+_Run this only *ONCE* to set-up the `/react-practice` folder and the shortcut `cp-mern`_
+
+To use the `cp-react` navigate to the `Unsolved` folder that contains the `server` and `client` folder.
+
+#### Bash Users (GitBash/Windows Users and users who didn't change default shell on Mac)
+```bash
+npx create-react-app ~/git/react-practice && echo "alias cp-react=\"echo 'Deleting Existing src folder content...' && rm -rfv ~/git/practice-app/src/ && echo 'Deleted Existing src content.' && echo 'Copying Activity src folder content to React App location...' && cp -rv ./. ~/git/practice-app/ && echo 'Copied  Activity src folder content to React App location.'\"" >> ~/.bashrc && source ~/.bashrc
+```
+
+#### ZSH Users (Users who changed their default shell on Mac)
+```bash
+npx create-react-app ~/git/react-practice && echo "alias cp-react=\"echo 'Deleting Existing src folder content...' && rm -rfv ~/git/react-practice/src/ && echo 'Deleted Existing src content.' && echo 'Copying Activity src folder content to React App location...' && cp -rv ./. ~/git/react-practice/ && echo 'Copied  Activity src folder content to React App location.'\"" >> ~/.zshrc && source ~/.zshrc
+```
+
+
+### MERN _(Week 21 & 22)_
+_Run this only *ONCE* to set-up the `/mern-practice` folder and the shortcut `cp-mern`_
+
+To use the `cp-mern` navigate to the `Unsolved` folder that contains the `server` and `client` folder.
+
+#### Bash Users (GitBash/Windows Users and users who didn't change default shell on Mac)
+```bash
+npx create-react-app ~/git/mern-practice/client && mkdir ~/git/mern-practice/server && touch ~/git/mern-practice/server/README.md && echo "alias cp-mern=\"echo 'Deleting Existing src folder content...' && rm -rfv ~/git/mern-practice/client/src/* && echo 'Deleted Existing src content.' && echo 'Copying Activity src folder content to React App location...' && cp -rv ./client/src/. ~/git/mern-practice/client/src/ && cp -rv ./client/package.json ~/git/mern-practice/client/ && echo 'Copied  Activity src folder content to React App location.' && rm -rfv ~/git/mern-practice/server/* && echo 'Deleted Existing MERN Server content.' && echo 'Copying Activity Server folder content to MERN App location...' && cp -rv ./server/. ~/git/mern-practice/server/ && echo 'Copied Activity src folder content to MERN App location.' && cp -rfv ./package.json ~/git/mern-practice/ && cd ~/git/mern-practice/ && npm i\"" >> ~/.bashrc && source ~/.bashrc
+```
+
+#### ZSH Users (Users who changed their default shell on Mac)
+```bash
+npx create-react-app ~/git/mern-practice/client && mkdir ~/git/mern-practice/server && touch ~/git/mern-practice/server/README.md && echo "alias cp-mern=\"echo 'Deleting Existing src folder content...' && rm -rfv ~/git/mern-practice/client/src/* && echo 'Deleted Existing src content.' && echo 'Copying Activity src folder content to React App location...' && cp -rv ./client/src/. ~/git/mern-practice/client/src/ && cp -rv ./client/package.json ~/git/mern-practice/client/ && echo 'Copied  Activity src folder content to React App location.' && rm -rfv ~/git/mern-practice/server/* && echo 'Deleted Existing MERN Server content.' && echo 'Copying Activity Server folder content to MERN App location...' && cp -rv ./server/. ~/git/mern-practice/server/ && echo 'Copied Activity src folder content to MERN App location.' && cp -rfv ./package.json ~/git/mern-practice/ && cd ~/git/mern-practice/ && npm i\"" >> ~/.zshrc && source ~/.zshrc
+```
